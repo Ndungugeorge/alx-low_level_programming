@@ -15,7 +15,7 @@ for (n = 49; n <= 57; n++)
 {
 if (n > i)
 {
-putchar(ch);
+putchar(i);
 putchar(n);
 if (i != 56 || n != 57)
 {
