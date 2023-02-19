@@ -13,11 +13,11 @@ for (i = 48; i <= 57; i++)
 {
 for (n = 49; n <= 57; n++)
 {
-if (n > ch)
+if (n > i)
 {
 putchar(ch);
 putchar(n);
-if (ch != 56 || n != 57)
+if (i != 56 || n != 57)
 {
 putchar(44);
 putchar(32);
