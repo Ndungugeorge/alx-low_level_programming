@@ -3,21 +3,21 @@
 /**
  * print_last_digit -> function prints the last digit of a number
  * @n: parameter set
- * Return: the last digit
+ * Return: digit
 */
 int print_last_digit(int n)
 {
-	int i;
+	int x;
 
 	if (n < 0)
 		n = -n;
 
 	x = n % 10;
 
-	if (i < 0)
-		i = -x;
+	if (x < 0)
+		x = -x;
 
-	_putchar (i + '0');
+	_putchar (x + '0');
 
-	return (i);
+	return (x);
 }
