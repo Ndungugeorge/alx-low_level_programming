@@ -2,6 +2,7 @@
 
 /**
  * _abs -> compute absolute value of a integer
+ * @n: set parameter
  * Return: absolute value of number
  */
 int _abs(int n)
