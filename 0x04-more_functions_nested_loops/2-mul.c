@@ -6,7 +6,7 @@
  * @b: parameter
  * return : 0
  */
-int mull(int a, int b );
+int mul(int a, int b );
 {
 	return (a * b);
 
