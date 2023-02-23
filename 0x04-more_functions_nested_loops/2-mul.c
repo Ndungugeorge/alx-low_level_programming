@@ -1,10 +1,10 @@
 
-#include"main.h"
+#include "main.h"
 /*
  * mul - multiples two integer
  * @a: parameter
  * @b: parameter
- * return : 0
+ * return : integer
  */
 int mul(int a, int b );
 {
