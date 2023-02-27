@@ -6,7 +6,7 @@
  */
 void puts_half(char *str)
 {
-	int i = 0, i;
+	int i = 0, j;
 
 	while (i >= 0)
 	{
@@ -16,11 +16,11 @@ void puts_half(char *str)
 	}
 
 	if (i % 2 == 1)
-		i = i / 2;
+		j = i / 2;
 	else
-		i = (i - 1) / 2;
+		j = (i - 1) / 2;
 
-	for (i++; i < i; i++)
-		_putchar(str[i]);
+	for (j++; j < i; j++)
+		_putchar(str[j]);
 	_putchar('\n');
 }
