@@ -3,7 +3,7 @@
 /**
  * create_array - creates an array of chars.
  * @size: size of the array.
- * @c: storaged char
+ * @c: stored char
  *
  * Return: pointer of an array of chars
  */
@@ -12,12 +12,12 @@ char *create_array(unsigned int size, char c)
 	char *k;
 	unsigned int i;
 
-	if (size == '\0')
+	if (size == 0)
 		return (NULL);
 
 	k = malloc(sizeof(c) * size);
 
-	if (k == '\0')
+	if (k == NULL)
 		return (NULL);
 
 	for (i = 0; i < size; i++)
