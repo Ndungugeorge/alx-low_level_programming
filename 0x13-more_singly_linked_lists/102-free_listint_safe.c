@@ -31,7 +31,7 @@ void free_listint2(listint_t **head)
  */
 size_t free_listint_safe(listint_t **h)
 {
-	size_t nnodes = 0;
+	size_t nod = 0;
 	listp_t *pr, *new, *add;
 	listint_t *currentnod;
 
