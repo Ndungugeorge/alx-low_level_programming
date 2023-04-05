@@ -35,7 +35,7 @@ size_t free_listint_safe(listint_t **h)
 	listp_t *pr, *new, *add;
 	listint_t *currentnod;
 
-	hptr = NULL;
+	pr = NULL;
 	while (*h != NULL)
 	{
 		new = malloc(sizeof(listp_t));
@@ -56,17 +56,17 @@ size_t free_listint_safe(listint_t **h)
 			{
 				*h = NULL;
 				free_listp2(&pr);
-				return (nnodes);
+				return (nod);
 			}
 		}
 
 		currentnod = *h;
 		*h = (*h)->next;
 		free(currentnod);
-		nnodes++;
+		nod++;
 	}
 
 	*h = NULL;
 	free_listp2(&pr);
-	return (nnodes);
+	return (nod);
 }
