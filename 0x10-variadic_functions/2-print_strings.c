@@ -1,5 +1,6 @@
 #include "variadic_functions.h"
-
+#include<stdio.h>
+#include<stdarg.h>
 
 /**
  * print_strings - prints stringsfollowed by new line.
@@ -13,6 +14,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list lst;
 	unsigned int i;
 	char *str;
+
+	if (n > 0)
+	{
 
 	va_start(lst, n);
 
@@ -29,6 +33,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				printf("%s", separator);
 	}
 
-	va_end(lst)
+	va_end(lst);
+	
+	}
 	printf("\n");
 }
