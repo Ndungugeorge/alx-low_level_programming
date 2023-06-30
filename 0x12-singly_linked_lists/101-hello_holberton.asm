@@ -1,22 +1,22 @@
 section .data
-    hello_msg db "Hello, Holberton", 0
-    format db "%s", 0
+    hello_msg db 'Hello, Holberton', 0
+    format db '%s', 0
 
 section .text
+    global _start
     extern printf
 
-global main
-main:
+_start:
     ; Prepare arguments for printf
     mov rdi, format
     mov rsi, hello_msg
+    xor eax, eax        ; Clear EAX register
 
     ; Call printf
-    xor eax, eax        ; Clear EAX register
     call printf
 
     ; Exit the program
-    mov eax, 0x60       ; System call number for exit
+    mov eax, 60         ; System call number for exit
     xor edi, edi        ; Exit status 0
     syscall
 
