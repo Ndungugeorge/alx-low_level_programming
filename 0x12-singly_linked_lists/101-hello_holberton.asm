@@ -1,22 +1,21 @@
-section .data
-    hello_msg db 'Hello, Holberton', 0
-    format db '%s', 0
+		extern	printf		; function, to be called
 
-section .text
-    global _start
-    extern printf
+		section .data		; Data section, init var
+msg:	db "Hello, Holberton", 0	; C string needs 0
+fmt:    db "%s", 10, 0          ; The printf format, "\n",'0'
 
-_start:
-    ; Prepare arguments for printf
-    mov rdi, format
-    mov rsi, hello_msg
-    xor eax, eax        ; Clear EAX register
+		section .text           ; Code .
 
-    ; Call printf
-    call printf
+		global main		; the std gcc entry point
+main:				; the program for the entry point
+		push    rbp		; set up stack frame, must be aligned
 
-    ; Exit the program
-    mov eax, 60         ; System call number for exit
-    xor edi, edi        ; Exit status 0
-    syscall
+		mov	rdi,fmt
+		mov	rsi,msg
+		mov	rax,0		; or can be xor rax,rax
+		call    printf		; Call C func
 
+		pop	rbp		; restore stack
+
+		mov	rax,0		; normal, no error, return value
+		ret			; return
