@@ -1,5 +1,5 @@
 #include "lists.h"
-
+#include<stdio.h>
 /**
  * priority - function that prints before main executes
  * Return: void

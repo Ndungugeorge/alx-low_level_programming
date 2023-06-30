@@ -1,11 +1,12 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef LIST_H
+#define LIST_H
 
 #include <stdlib.h>
+#include <string.h>
 /**
  * struct list_s - singly linked list
- * @str: string - (malloc'ed string)
- * @len: length of the string
+ * @str: string - malloc
+ * @len: leng of the string
  * @next: points to the next node
  *
  * Description: singly linked list node structure
